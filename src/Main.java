@@ -14,7 +14,16 @@ public class Main {
     public static void task1 () {
         System.out.println("Задача 1");
         // Пишем код для задачи 1
+        int deposit = 15000;
+        int totalSum = 0;
+        int needSum = 2459000;
+        int months = 0;
 
+        while (totalSum<=needSum) {
+            totalSum = totalSum + deposit;
+            months++;
+            System.out.println("Месяц " + months + ", сумма накоплений равна " + totalSum + " рублей.");
+        }
     }
 
     public static void task2 () {
