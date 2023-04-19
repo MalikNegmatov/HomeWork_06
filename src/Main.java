@@ -62,7 +62,18 @@ public class Main {
     public static void task4 () {
         System.out.println("\nЗадача 4");
         // Пишем код для задачи 4
+        double totalSum = 15000.0;
+        double needSum = 12000000.0;
+        double percentAdd = 1.07;
+        int months = 0;
+        String totalSumFormatted;
 
+        while (totalSum<=needSum) {
+            totalSum *= percentAdd;
+            months++;
+             totalSumFormatted = String.format("%8.2f", totalSum);
+            System.out.println("Месяц " + months + ", сумма накоплений равна " + totalSumFormatted + " рублей.");
+        }
     }
 
     public static void task5 () {
