@@ -100,6 +100,20 @@ public class Main {
         System.out.println("\nЗадача 6");
         // Пишем код для задачи 6
 
+        double totalSum = 15000.0;
+        double percentAdd = 1.07;
+        int howLong = 9*12;
+        int months = 0;
+        String totalSumFormatted;
+
+        while (months<=howLong) {
+            totalSum *= percentAdd;
+            months++;
+            if ( months % 6 == 0 ) {
+                totalSumFormatted = String.format("%8.2f", totalSum);
+                System.out.println("Месяц " + months + ", сумма накоплений Василия равна " + totalSumFormatted + " рублей.");
+            }
+        }
     }
     public static void task7 () {
         System.out.println("\nЗадача 7");
