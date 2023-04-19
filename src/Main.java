@@ -29,13 +29,34 @@ public class Main {
     public static void task2 () {
         System.out.println("\nЗадача 2");
         // Пишем код для задачи 2
+        int numberUp=1;
+        String blank = " ";
 
+        while (numberUp<11) {
+            System.out.print(numberUp + blank);
+            numberUp++;
+        }
+        System.out.println();
+        for (int i = 10; i >= 1; i-- ) {
+            System.out.print(i+blank);
+        }
+        System.out.println();
     }
 
     public static void task3 () {
         System.out.println("\nЗадача 3");
         // Пишем код для задачи 3
+        int totalPopulation = 12000000;
+        int birthRate = 17;
+        int deathRate = 8;
+        int rateRatio = 1000;
 
+        for (int i=1; i<=10; i++) {
+            totalPopulation = totalPopulation + birthRate*totalPopulation/rateRatio -
+                    deathRate*totalPopulation/rateRatio;
+            System.out.println("Год " + i + ", численность населения составляет " +
+                    totalPopulation+ " человек.");
+        }
     }
 
     public static void task4 () {
