@@ -131,5 +131,14 @@ public class Main {
     public static void task8 () {
         System.out.println("\nЗадача 8");
         // Пишем код для задачи 8
+        int cometCycle=79;
+        int currentYear=2023;
+        int minusYears = 200;
+        int plusYears = 100;
+        int year=currentYear-minusYears;
+        while ( year <= (currentYear+plusYears) ) {
+            if (year % cometCycle == 0 ) System.out.println(year);
+            year++;
+        }
     }
 }
