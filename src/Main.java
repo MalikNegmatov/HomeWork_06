@@ -118,6 +118,14 @@ public class Main {
     public static void task7 () {
         System.out.println("\nЗадача 7");
         // Пишем код для задачи 7
+        int fridayDate = 3;
+        int currentDate = 1;
+        while (currentDate<=31) {
+            if ((currentDate - fridayDate) % 7 == 0) {
+                System.out.println("Сегодня пятница, " + currentDate + "-е число. Необходимо подготовить отчет");
+            }
+            currentDate++;
+        }
     }
 
     public static void task8 () {
