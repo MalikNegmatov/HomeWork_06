@@ -122,16 +122,16 @@ public class Main {
         System.out.println("\nЗадача 6");
         // Пишем код для задачи 6
 
-        double totalSum = 15000.0;
-        double percentAdd = 1.07;
-        int howLong = 9*12;
-        int months = 0;
-        String totalSumFormatted;
+        double totalSum = 15000.0;  // сумма вклада
+        double percentAdd = 1.07; // процентная ставка 1 + n/100, n - заданный процент
+        int howLong = 9*12; // длительность периода накопления год*12 месяцев
+        int months = 0; // счетчик месяцев и цикла
+        String totalSumFormatted; // строка форматирования для переменной типа double
 
         while (months<=howLong) {
-            totalSum *= percentAdd;
-            months++;
-            if ( months % 6 == 0 ) {
+            totalSum *= percentAdd; // увеличиваем на сумму проценнтной ставки
+            months++;  // переходим к следующему месяцу
+            if ( months % 6 == 0 ) {  // если месяц кратен 6, выводим промежуточный результат
                 totalSumFormatted = String.format("%8.2f", totalSum);
                 System.out.println("Месяц " + months + ", сумма накоплений Василия равна " + totalSumFormatted + " рублей.");
             }
