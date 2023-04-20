@@ -140,27 +140,29 @@ public class Main {
     public static void task7 () {
         System.out.println("\nЗадача 7");
         // Пишем код для задачи 7
-        int fridayDate = 3;
-        int currentDate = 1;
-        while (currentDate<=31) {
+        int fridayDate = 3; // дата первой пятницы (1-7)
+        int currentDate = 1; // инициализация счетчика цикла - первое число
+        while (currentDate<=31) { // условие продолжительности цикла
+            // пятницы кратны 7 к дате первой пятницы. Следим за этим
             if ((currentDate - fridayDate) % 7 == 0) {
                 System.out.println("Сегодня пятница, " + currentDate + "-е число. Необходимо подготовить отчет");
             }
-            currentDate++;
+            currentDate++; // переход на следующее число
         }
     }
 
     public static void task8 () {
         System.out.println("\nЗадача 8");
         // Пишем код для задачи 8
-        int cometCycle=79;
-        int currentYear=2023;
-        int minusYears = 200;
-        int plusYears = 100;
-        int year=currentYear-minusYears;
+        int cometCycle=79; // период обращения кометы
+        int currentYear=2023; // текущий год
+        int minusYears = 200; // период до текущего года
+        int plusYears = 100; // период после текущего года
+        int year=currentYear-minusYears; // начало цикла с левого края заданного интервала
         while ( year <= (currentYear+plusYears) ) {
+            // Если рассматриваемый год кратен периоду обращения кометы - бинго!
             if (year % cometCycle == 0 ) System.out.println(year);
-            year++;
+            year++; // переход на следующий год
         }
     }
 }
